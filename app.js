@@ -9,6 +9,9 @@ const cartItems = document.querySelector(".cart-items");
 const cartTotal = document.querySelector(".cart-total");
 const cartContent = document.querySelector(".cart-content");
 const productsDOM = document.querySelector(".products-center");
+const menuBlock = document.querySelector(".menu-block");
+const menuBtn = document.querySelector(".nav-icon");
+const closeMenuBtn = document.querySelector(".close-menu");
 // cart
 let cart = [];
 
@@ -120,12 +123,19 @@ class UI {
     cartOverlay.classList.add("transparentBcg");
     cartDOM.classList.add("showCart");
   }
+  // menu
+  showMenu() {
+    menuBlock.classList.add("showMenu");
+  }
+  // menu end
   setupAPP() {
     cart = Storage.getCart();
     this.setCartValues(cart);
     this.populateCart(cart);
     cartBtn.addEventListener("click", this.showCart);
     closeCartBtn.addEventListener("click", this.hideCart);
+    menuBtn.addEventListener("click", this.showMenu);
+    closeMenuBtn.addEventListener("click", this.hideMenu);
   }
   populateCart(cart) {
     cart.forEach((item) => this.addCartItem(item));
@@ -134,6 +144,11 @@ class UI {
     cartOverlay.classList.remove("transparentBcg");
     cartDOM.classList.remove("showCart");
   }
+  // menu
+  hideMenu() {
+    menuBlock.classList.remove("showMenu");
+  }
+  // menu end
   cartLogic() {
     // clear cart item
     clearCartBtn.addEventListener("click", () => {

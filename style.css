@@ -169,6 +169,23 @@ body {
 }
 
 /* ---------------End of Products ---------------- */
+/* menu block */
+.menu-block {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(61, 154, 240);
+  z-index: 2;
+  border-top: 2px solid var(--mainBlack);
+  border-right: 2px solid var(--mainBlack);
+  box-shadow: inset 10px 8px 0 0;
+  transform: translateX(-101%);
+}
+.showMenu {
+  transform: translateX(0);
+}
 /* --------------- Cart ---------------- */
 .cart-overlay {
   position: fixed;
@@ -204,6 +221,12 @@ body {
   .cart {
     width: 30vw;
     min-width: 450px;
+  }
+  .menu {
+    width: 20vw;
+    min-width: 300px;
+    border-top-right-radius: 70% 90%;
+    border-bottom-right-radius: 70% 90%;
   }
 }
 
