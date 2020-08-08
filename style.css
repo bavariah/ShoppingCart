@@ -182,6 +182,7 @@ body {
   border-right: 2px solid var(--mainBlack);
   box-shadow: inset 10px 8px 0 0;
   transform: translateX(-101%);
+  transition: var(--mainTransition);
 }
 .showMenu {
   transform: translateX(0);
