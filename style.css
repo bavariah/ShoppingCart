@@ -185,6 +185,29 @@ body {
   transform: translateX(-101%);
   transition: var(--mainTransition);
 }
+.menu-block ul {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  margin-left: 50px;
+  list-style: none;
+}
+.menu-block ul li {
+  padding: 15px 12px;
+}
+.menu-block ul li a {
+  text-decoration: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  transition: 0.3s all ease-in-out;
+  line-height: 1.5;
+  padding-bottom: 3px;
+  color: var(--mainBlack);
+}
+.menu-block ul li a:hover {
+  border-bottom: 2px solid var(--primaryColor);
+}
 .showMenu {
   transform: translateX(0);
 }
@@ -238,7 +261,18 @@ body {
     border-bottom-right-radius: 70% 90%;
   }
 }
-
+@media (max-width: 768px) {
+  .menu .close-menu-btn {
+    top: 20px;
+    right: 30px;
+  }
+  .menu-block ul {
+    margin-left: 0px;
+  }
+  .menu-block ul li {
+    text-align: center;
+  }
+}
 .close-cart-btn {
   font-size: 1.7rem;
   cursor: pointer;
